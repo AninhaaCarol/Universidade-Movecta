@@ -122,4 +122,4 @@
       <div class="label">Segundos</div>
     </div>
   </div>
-  <h2 class="subtitle">Movimento que conecta</h
+  <h2 class="subtitle"> Movimento que conecta </h
