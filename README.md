@@ -2,12 +2,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>UniversidadeMovecta</title>
+<title>Vem aí... - Universidade Movecta</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #ffffff; /* Fundo totalmente branco */
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,19 +18,25 @@
     color: #0A0532;
     position: relative;
   }
-  h1 {
+  h1.title {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem; /* Aumentado o tamanho do título */
+    margin-bottom: 10px;
+  }
+  h2.subtitle {
+    font-weight: 400;
+    font-size: 2.5rem; /* Tamanho do subtítulo */
     margin-bottom: 40px;
   }
   .countdown {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Aumentado o tamanho do relógio */
     background: #e1e1e1;
     padding: 25px 40px;
     border-radius: 12px;
     display: flex;
     gap: 30px;
     user-select: none;
+    align-items: center;
   }
   .countdown div {
     text-align: center;
@@ -38,7 +44,7 @@
   .countdown div span {
     display: block;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 5rem; /* Aumentado o tamanho dos números */
   }
   .label {
     font-size: 1rem;
@@ -48,49 +54,56 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    max-height: 60px;
-    max-width: 150px;
+    max-height: 100px; /* maior tamanho */
+    max-width: 250px;  /* maior largura */
     z-index: 1000;
   }
   .logo-bottom {
     margin-top: 40px;
-    max-height: 80px;
-    max-width: 200px;
+    width: calc(40px * 5 + 30px * 4 + 80px); /* Mesma largura do relógio aproximada */
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
   }
   @media (max-width: 600px) {
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
+    h1.title {
+      font-size: 3rem; /* Ajuste para telas menores */
+      margin-bottom: 10px;
       text-align: center;
       padding: 0 15px;
     }
+    h2.subtitle {
+      font-size: 2rem; /* Ajuste para telas menores */
+      margin-bottom: 30px;
+    }
     .countdown {
-      font-size: 1.8rem;
+      font-size: 2.5rem; /* Ajuste para telas menores */
       padding: 20px;
       gap: 15px;
       flex-wrap: wrap;
       justify-content: center;
     }
     .countdown div span {
-      font-size: 3rem;
+      font-size: 4rem; /* Ajuste para telas menores */
     }
     .logo-top-right {
-      max-height: 45px;
-      max-width: 110px;
+      max-height: 70px;
+      max-width: 170px;
       top: 10px;
       right: 10px;
     }
     .logo-bottom {
-      max-height: 60px;
-      max-width: 150px;
+      width: 90%;
+      max-width: 350px;
       margin-top: 25px;
     }
   }
 </style>
 </head>
 <body>
-  <img src="https://raw.githubusercontent.com/AninhaaCarol/Universidade-Movecta/refs/heads/main/4.png" alt="Logo Universidade Movecta" class="logo-top-right" />
-  <h1>Universidade Movecta</h1>
+  <img src="https://raw.githubusercontent.com/AninhaaCarol/UniversidadeMovecta/refs/heads/main/4.png" alt="Logo Universidade Movecta" class="logo-top-right" />
+  <h1 class="title">Vem aí...</h1>
+  <h2 class="subtitle">Universidade Movecta</h2>
   <div class="countdown" aria-label="Contagem regressiva para lançamento da Universidade Movecta">
     <div>
       <span id="hours">00</span>
@@ -105,7 +118,7 @@
       <div class="label">Segundos</div>
     </div>
   </div>
-  <img src="https://raw.githubusercontent.com/AninhaaCarol/Universidade-Movecta/refs/heads/main/6.png" alt="Logo Movecta" class="logo-bottom" />
+  <img src="https://raw.githubusercontent.com/AninhaaCarol/UniversidadeMovecta/refs/heads/main/Universidade%20Moveta%20(2).png" alt="Logo Universidade Movecta" class="logo-bottom" />
   <script>
     // Configura a data alvo: 1 de junho do ano corrente às 00:00:00
     const targetDate = new Date(new Date().getFullYear(), 5, 1, 0, 0, 0); // mês 5 é junho (0-based)
