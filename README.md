@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Universidade Movecta</title>
+<title>Universidade Movecta - Contagem Regressiva</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   body {
@@ -16,6 +16,7 @@
     justify-content: center;
     height: 100vh;
     color: #0A0532;
+    position: relative;
   }
   h1 {
     font-weight: 700;
@@ -43,6 +44,19 @@
     font-size: 1rem;
     margin-top: 5px;
   }
+  .logo-top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-height: 60px;
+    max-width: 150px;
+    z-index: 1000;
+  }
+  .logo-bottom {
+    margin-top: 40px;
+    max-height: 80px;
+    max-width: 200px;
+  }
   @media (max-width: 600px) {
     h1 {
       font-size: 2.2rem;
@@ -60,11 +74,23 @@
     .countdown div span {
       font-size: 3rem;
     }
+    .logo-top-right {
+      max-height: 45px;
+      max-width: 110px;
+      top: 10px;
+      right: 10px;
+    }
+    .logo-bottom {
+      max-height: 60px;
+      max-width: 150px;
+      margin-top: 25px;
+    }
   }
 </style>
 </head>
 <body>
-  <h1>Está chegando!</h1>
+  <img src="logo-universidade-movecta.png" alt="Logo Universidade Movecta" class="logo-top-right" />
+  <h1>Universidade Movecta</h1>
   <div class="countdown" aria-label="Contagem regressiva para lançamento da Universidade Movecta">
     <div>
       <span id="hours">00</span>
@@ -79,7 +105,7 @@
       <div class="label">Segundos</div>
     </div>
   </div>
-
+  <img src="logo-movecta.png" alt="Logo Movecta" class="logo-bottom" />
   <script>
     // Configura a data alvo: 1 de junho do ano corrente às 00:00:00
     const targetDate = new Date(new Date().getFullYear(), 5, 1, 0, 0, 0); // mês 5 é junho (0-based)
