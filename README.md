@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Universidade Movecta - Contagem Regressiva</title>
+<title>UniversidadeMovecta</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   body {
@@ -89,7 +89,7 @@
 </style>
 </head>
 <body>
-  <img src="[logo-universidade-movecta.png](https://raw.githubusercontent.com/AninhaaCarol/Universidade-Movecta/refs/heads/main/4.png)" alt="Logo Universidade Movecta" class="logo-top-right" />
+  <img src="https://raw.githubusercontent.com/AninhaaCarol/Universidade-Movecta/refs/heads/main/4.png" alt="Logo Universidade Movecta" class="logo-top-right" />
   <h1>Universidade Movecta</h1>
   <div class="countdown" aria-label="Contagem regressiva para lançamento da Universidade Movecta">
     <div>
@@ -105,7 +105,7 @@
       <div class="label">Segundos</div>
     </div>
   </div>
-  <img src="[logo-movecta.png](https://raw.githubusercontent.com/AninhaaCarol/Universidade-Movecta/refs/heads/main/6.png)" alt="Logo Movecta" class="logo-bottom" />
+  <img src="https://raw.githubusercontent.com/AninhaaCarol/Universidade-Movecta/refs/heads/main/6.png" alt="Logo Movecta" class="logo-bottom" />
   <script>
     // Configura a data alvo: 1 de junho do ano corrente às 00:00:00
     const targetDate = new Date(new Date().getFullYear(), 5, 1, 0, 0, 0); // mês 5 é junho (0-based)
