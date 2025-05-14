@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
@@ -5,9 +6,10 @@
 <title>EM BREVE - Universidade Movecta</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ffffff; /* Fundo totalmente branco */
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,20 +19,24 @@
     height: 100vh;
     color: #0A0532;
     position: relative;
-    overflow: hidden; /* Para evitar scroll indesejado */
+    overflow: hidden;
+    text-align: center;
   }
+
   h1.title {
     font-weight: 700;
-    font-size: 3rem; /* Ajustado o tamanho do título */
+    font-size: 3rem;
     margin-bottom: 10px;
   }
+
   h2.subtitle {
     font-weight: 400;
-    font-size: 2rem; /* Tamanho do subtítulo */
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin: 20px 0;
   }
+
   .countdown {
-    font-size: 2rem; /* Ajustado o tamanho do relógio */
+    font-size: 2rem;
     background: #e1e1e1;
     padding: 20px 30px;
     border-radius: 12px;
@@ -38,65 +44,54 @@
     gap: 20px;
     user-select: none;
     align-items: center;
+    justify-content: center;
   }
+
   .countdown div {
     text-align: center;
   }
+
   .countdown div span {
     display: block;
     font-weight: 700;
-    font-size: 3rem; /* Ajustado o tamanho dos números */
+    font-size: 3rem;
   }
+
   .label {
     font-size: 1rem;
     margin-top: 5px;
   }
+
   .logo-top-left {
     position: fixed;
     top: 20px;
     left: 20px;
-    max-height: 120px; /* Aumentado o tamanho */
-    max-width: 250px;  /* Aumentado a largura */
+    max-height: 120px;
+    max-width: 120px;
     z-index: 1000;
   }
-  .logo-bottom {
-    margin-top: 10px; /* Subindo a imagem para mais perto do texto */
-    width: calc(40px * 5 + 30px * 4 + 80px); /* Mesma largura do relógio aproximada */
-    max-width: 600px;
-    height: auto;
-    object-fit: contain;
-  }
+
   @media (max-width: 600px) {
     h1.title {
-      font-size: 2.5rem; /* Ajuste para telas menores */
-      margin-bottom: 10px;
-      text-align: center;
-      padding: 0 15px;
+      font-size: 2.5rem;
     }
     h2.subtitle {
-      font-size: 1.5rem; /* Ajuste para telas menores */
-      margin-bottom: 20px;
+      font-size: 1.5rem;
     }
     .countdown {
-      font-size: 1.5rem; /* Ajuste para telas menores */
+      font-size: 1.5rem;
       padding: 15px;
       gap: 10px;
       flex-wrap: wrap;
-      justify-content: center;
     }
     .countdown div span {
-      font-size: 2.5rem; /* Ajuste para telas menores */
+      font-size: 2.5rem;
     }
     .logo-top-left {
       max-height: 80px;
-      max-width: 170px;
+      max-width: 80px;
       top: 10px;
       left: 10px;
-    }
-    .logo-bottom {
-      width: 90%;
-      max-width: 350px;
-      margin-top: 10px; /* Ajuste para telas menores */
     }
   }
 </style>
@@ -104,7 +99,8 @@
 <body>
   <img src="https://raw.githubusercontent.com/AninhaaCarol/UniversidadeMovecta/refs/heads/main/4.png" alt="Logo Universidade Movecta" class="logo-top-left" />
   <h1 class="title">EM BREVE</h1>
-  <div class="countdown" aria-label="Contagem regressiva para lançamento da Universidade Movecta">
+
+  <div class="countdown" aria-label="Contagem regressiva para lançamento da Universidade Movecta" aria-live="polite">
     <div>
       <span id="days">00</span>
       <div class="label">Dias</div>
@@ -122,4 +118,37 @@
       <div class="label">Segundos</div>
     </div>
   </div>
-  <h2 class="subtitle"> Movimento que conecta </h
+
+  <h2 class="subtitle">Movimento que conecta</h2>
+
+  <script>
+    const targetDate = new Date(new Date().getFullYear(), 5, 1, 0, 0, 0); // 1 de junho
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        ['days', 'hours', 'minutes', 'seconds'].forEach(id => {
+          document.getElementById(id).textContent = "00";
+        });
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    const timerInterval = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
