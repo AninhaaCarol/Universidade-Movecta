@@ -20,7 +20,7 @@
   }
   h1.title {
     font-weight: 700;
-    font-size: 4rem; /* Aumentado o tamanho do título */
+    font-size: 4rem;
     margin-bottom: 10px;
   }
   h2.subtitle {
