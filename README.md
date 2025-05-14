@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vem aí!</title>
+<title> Vem aí! </title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   body {
@@ -20,7 +20,7 @@
   }
   h1.title {
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 4rem; /* Tamanho do título */
     margin-bottom: 10px;
   }
   h2.subtitle {
