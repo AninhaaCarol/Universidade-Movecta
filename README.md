@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vem aí...</title>
+<title> Vem aí! </title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   body {
@@ -101,7 +101,6 @@
 </style>
 </head>
 <body>
-    <h1 class="title">Vem aí...</h1>
   <h2 class="subtitle">Universidade Movecta</h2>
   <div class="countdown" aria-label="Contagem regressiva para lançamento da Universidade Movecta">
     <div>
